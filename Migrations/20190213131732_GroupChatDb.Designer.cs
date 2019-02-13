@@ -8,16 +8,16 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GroupChat.Migrations
 {
     [DbContext(typeof(GroupChatContext))]
-    [Migration("20190213060834_GroupChat")]
-    partial class GroupChat
+    [Migration("20190213131732_GroupChatDb")]
+    partial class GroupChatDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024");
+                .HasAnnotation("ProductVersion", "2.2.2-servicing-10034");
 
-            modelBuilder.Entity("GroupChat.Group", b =>
+            modelBuilder.Entity("GroupChat.Models.Group", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -38,7 +38,7 @@ namespace GroupChat.Migrations
 
                     b.Property<int>("GroupId");
 
-                    b.Property<string>("message");
+                    b.Property<string>("Text");
 
                     b.HasKey("ID");
 

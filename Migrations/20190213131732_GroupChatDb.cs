@@ -2,7 +2,7 @@
 
 namespace GroupChat.Migrations
 {
-    public partial class GroupChat : Migration
+    public partial class GroupChatDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,7 +26,7 @@ namespace GroupChat.Migrations
                     ID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     AddedBy = table.Column<string>(nullable: true),
-                    message = table.Column<string>(nullable: true),
+                    Text = table.Column<string>(nullable: true),
                     GroupId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

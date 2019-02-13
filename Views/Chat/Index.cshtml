@@ -57,11 +57,12 @@
                 <div class="col-md-2 less_padding">
                   <div class="col group_main">
                        <div class="text-center"> Groups </div>
-                       <div clsss="row" style="height: 500px;overflow: scroll;" id="groups">
+                       <div class="row" style="height: 500px;overflow: scroll;" id="groups">
                         <input type="hidden" value="" id="currentGroup">
                        <!-- List groups-->
-                          @foreach (var group in (dynamic)ViewData["UserGroups"]) {
-                            <div class="group" data-group_id="@group.GroupId"> @group.GroupName </div> 
+                          @foreach (var group in ((dynamic) ViewData["UserGroups"]))
+                          {
+                              <div class="group" data-group_id="@group.GroupId">@group.GroupName</div>
                           }
                         </div>
                       <div class="text-center"> 
